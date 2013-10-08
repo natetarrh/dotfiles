@@ -22,7 +22,6 @@ nmap <leader>w :w!<cr>
 
 set nosmd
 set laststatus=2
-set statusline+=%F "working file path
 set showmode
 
 set autochdir "cd into directory with file
