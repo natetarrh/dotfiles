@@ -56,6 +56,7 @@ set timeoutlen=500
 set t_Co=256
 syntax enable "Enable highlighting
 set bg=dark
+colorscheme solarized
 
 set encoding=utf8
 try
@@ -140,8 +141,6 @@ set wrap
 " Yank text to the OS X clipboard
 noremap <leader>y "*y
 noremap <leader>yy "*Y
-
-colorscheme solarized
 
 "Options for YouCompleteMe 
 let g:ycm_filetype_blacklist = {
