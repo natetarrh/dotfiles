@@ -1,0 +1,6 @@
+[alias]
+	co = checkout
+	st = status
+[user]
+	email = natetarrh@gmail.com
+	name = Nate Tarrh
