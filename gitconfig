@@ -4,3 +4,5 @@
 [user]
 	email = natetarrh@gmail.com
 	name = Nate Tarrh
+[pull]
+	ff = only
