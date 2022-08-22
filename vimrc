@@ -1,14 +1,10 @@
-" fzf vim-fugitive vim-gitgutter vim-surround vim-vinegar
 let base16colorspace=256
-let g:fzf_layout = { 'down': '40%' }
-let g:fzf_preview_window = []
+colorscheme base16-mocha
+syntax on
+filetype plugin indent on
 
 autocmd BufWritePost * GitGutter
 autocmd Filetype gitcommit setlocal textwidth=72
-
-colorscheme base16-mocha
-filetype plugin indent on
-syntax on
 
 inoremap jk <Esc>
 nnoremap <C-f> :Files<CR>
@@ -42,3 +38,5 @@ set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg
 set wildmode=longest:full,full
 
 source /usr/share/doc/fzf/examples/fzf.vim
+let g:fzf_layout = { 'down': '40%' }
+let g:fzf_preview_window = []
