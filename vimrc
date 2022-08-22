@@ -5,6 +5,12 @@ filetype plugin indent on
 
 autocmd BufWritePost * GitGutter
 autocmd Filetype gitcommit setlocal textwidth=72
+function! YankToClipboard(event)
+  if a:event.operator is 'y' && a:event.regname is ''
+    execute 'OSCYankReg "'
+  endif
+endfunction
+autocmd TextYankPost * call YankToClipboard(v:event)
 
 inoremap jk <Esc>
 nnoremap <C-f> :Files<CR>
@@ -12,7 +18,7 @@ nnoremap <C-p> :Buffers<CR>
 nnoremap <Space> :
 
 set autoindent
-set clipboard=unnamed
+set clipboard=unnamedplus
 set expandtab
 set hidden
 set hlsearch
