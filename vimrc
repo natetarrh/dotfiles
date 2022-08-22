@@ -30,13 +30,17 @@ set smartindent
 set smarttab
 set softtabstop=2
 set splitright
-set statusline=\ %f\ %m%r%h%w\ %{FugitiveStatusline()}\ [%l,%c%V][%P]
+set statusline=\ %f\ %m%r%h%w
+if &rtp =~ 'fugitive'
+  set statusline+=\ %{FugitiveStatusline()}
+endif
+set statusline+=\ [%l,%c%V][%P]
 set tabstop=2
 set textwidth=80
 set whichwrap+=<,>,h,l,[,]
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg
 set wildmode=longest:full,full
 
-source /usr/share/doc/fzf/examples/fzf.vim
+" source /path/to/fzf/examples/fzf.vim
 let g:fzf_layout = { 'down': '40%' }
 let g:fzf_preview_window = []

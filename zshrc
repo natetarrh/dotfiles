@@ -24,12 +24,12 @@ alias s='git status'
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='rg --files'
 
-source /home/natetarrh/base16-fzf/bash/base16-mocha.config
-source /usr/share/doc/fzf/examples/completion.zsh
-source /usr/share/doc/fzf/examples/key-bindings.zsh
-
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
         eval "$("$BASE16_SHELL/profile_helper.sh")"
+
+source "$HOME/dotfiles/base16-fzf/bash/base16-mocha.config"
+# source /path/to/fzf/examples/completion.zsh
+# source /path/to/fzf/examples/key-bindings.zsh
