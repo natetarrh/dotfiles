@@ -21,4 +21,4 @@
 	url = https://github.com/base16-project/base16-fzf.git
 [submodule "vim/pack/ojroques/start/vim-oscyank"]
 	path = vim/pack/ojroques/start/vim-oscyank
-	url = https://github.com/ojroques/vim-oscyank
+	url = https://github.com/ojroques/vim-oscyank.git
