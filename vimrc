@@ -4,6 +4,8 @@ syntax on
 filetype plugin indent on
 
 autocmd BufWritePost * GitGutter
+autocmd! FileType fzf set laststatus=0 cmdheight=0
+  \| autocmd BufLeave <buffer> set laststatus=2 cmdheight=1
 autocmd Filetype gitcommit setlocal textwidth=72
 function! YankToClipboard(event)
   if a:event.operator is 'y' && a:event.regname is ''
@@ -41,6 +43,7 @@ set statusline=\ %m%r%h%w
 set statusline+=\ %{FugitiveStatusline()}
 set statusline+=\ [%l,%c%V][%P]
 set tabstop=2
+set termguicolors
 set textwidth=80
 set whichwrap+=<,>,h,l,[,]
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg
