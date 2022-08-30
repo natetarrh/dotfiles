@@ -39,7 +39,7 @@ set smarttab
 set softtabstop=2
 set splitright
 set statusline=\ %f
-set statusline=\ %m%r%h%w
+set statusline+=\ %m%r%h%w
 set statusline+=\ %{FugitiveStatusline()}
 set statusline+=\ [%l,%c%V][%P]
 set tabstop=2
