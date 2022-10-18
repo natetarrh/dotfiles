@@ -4,15 +4,9 @@ syntax on
 filetype plugin indent on
 
 autocmd BufWritePost * GitGutter
-autocmd! FileType fzf set laststatus=0 cmdheight=0
-  \| autocmd BufLeave <buffer> set laststatus=2 cmdheight=1
+autocmd! FileType fzf set laststatus=0
+  \| autocmd BufLeave <buffer> set laststatus=2
 autocmd Filetype gitcommit setlocal textwidth=72
-function! YankToClipboard(event)
-  if a:event.operator is 'y' && a:event.regname is ''
-    execute 'OSCYankReg "'
-  endif
-endfunction
-autocmd TextYankPost * call YankToClipboard(v:event)
 
 inoremap jk <Esc>
 nnoremap <C-f> :Files<CR>
@@ -31,6 +25,7 @@ set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
 set mouse=a
 set number
 set regexpengine=0
+set rtp+=/opt/homebrew/opt/fzf
 set shiftwidth=2
 set showcmd
 set smartcase
@@ -49,6 +44,5 @@ set whichwrap+=<,>,h,l,[,]
 set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg
 set wildmode=longest:full,full
 
-" source /path/to/fzf/examples/fzf.vim
 let g:fzf_layout = { 'down': '40%' }
 let g:fzf_preview_window = []

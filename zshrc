@@ -23,13 +23,17 @@ alias s='git status'
 
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='rg --files'
+export TERMINFO_DIRS=$TERMINFO_DIRS:$HOME/.local/share/terminfo
 
 # Base16 Shell
 BASE16_SHELL="$HOME/.config/base16-shell/"
 [ -n "$PS1" ] && \
     [ -s "$BASE16_SHELL/profile_helper.sh" ] && \
-        eval "$("$BASE16_SHELL/profile_helper.sh")"
+        source "$BASE16_SHELL/profile_helper.sh"
 
-source "$HOME/.dotfiles/base16-fzf/bash/base16-mocha.config"
-# source /path/to/fzf/examples/completion.zsh
-# source /path/to/fzf/examples/key-bindings.zsh
+base16_mocha
+
+source "$HOME/Development/dotfiles/base16-fzf/bash/base16-mocha.config"
+
+# FZF
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
