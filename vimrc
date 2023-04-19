@@ -3,6 +3,7 @@ colorscheme base16-mocha
 syntax on
 filetype plugin indent on
 
+autocmd BufReadPost *.yaml.template set syntax=yaml
 autocmd BufWritePost * GitGutter
 autocmd! FileType fzf set laststatus=0
   \| autocmd BufLeave <buffer> set laststatus=2
@@ -14,7 +15,7 @@ nnoremap <C-p> :Buffers<CR>
 nnoremap <Space> :
 
 set autoindent
-set clipboard=unnamedplus
+set clipboard=unnamed
 set expandtab
 set hidden
 set hlsearch
