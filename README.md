@@ -33,17 +33,17 @@ $ git clone git@github.com:natetarrh/dotfiles.git ~/Developer/dotfiles          
 $ git submodule update --init
 ```
 
+- Install fzf, tmux, and ripgrep:
+```sh
+$ brew install fzf rg tmux
+```
+
 - Create symlinks:
 ```sh
 $ for dotfile in gitconfig tmux.conf vim vimrc zshrc
 do
   ln -sf ~/Developer/dotfiles/$dotfile ~/.$dotfile
 done
-```
-
-- Install fzf, tmux, and ripgrep:
-```sh
-$ brew install fzf rg tmux
 ```
 
 - Download and install [Input](https://input.djr.com) fonts (14pt Input Mono Narrow, Regular)
