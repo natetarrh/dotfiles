@@ -2,7 +2,7 @@
 	co = checkout
 	st = status
 [user]
-	email = ntarrh@squareup.com
-	name = Nathan Tarrh
+	email = natetarrh@gmail.com
+	name = Nate Tarrh
 [pull]
 	ff = only
