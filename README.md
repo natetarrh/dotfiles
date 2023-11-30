@@ -42,7 +42,7 @@ $ brew install fzf rg tmux
 ```sh
 $ for dotfile in gitconfig tmux.conf vim vimrc zshrc
 do
-  ln -sf ~/Developer/dotfiles/$dotfile ~/.$dotfile
+  ln -s ~/Developer/dotfiles/$dotfile ~/.$dotfile
 done
 ```
 
