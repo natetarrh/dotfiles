@@ -29,6 +29,8 @@ alias ls='ls --color'
 alias s='git status'
 alias t='init_or_attach_tmux_session'
 
+bindkey -e
+
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='rg --files'
 export HISTSIZE=1000000
