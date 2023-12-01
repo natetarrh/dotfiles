@@ -44,6 +44,6 @@ setopt INC_APPEND_HISTORY
 setopt SHARE_HISTORY
 setopt PROMPT_SUBST
 
-[ -f ~/Developer/dotfiles/base16-fzf/bash/base16-monokai.config ] && \
-  source ~/Developer/dotfiles/base16-fzf/bash/base16-monokai.config
+[ -f ~/Developer/dotfiles/base16-fzf/bash/base16-mocha.config ] && \
+  source ~/Developer/dotfiles/base16-fzf/bash/base16-mocha.config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh

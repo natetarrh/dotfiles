@@ -1,5 +1,5 @@
 let base16colorspace=256
-colorscheme base16-monokai
+colorscheme base16-mocha
 syntax on
 filetype plugin indent on
 

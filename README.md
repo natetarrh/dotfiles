@@ -47,4 +47,4 @@ done
 ```
 
 - Download and install [Input](https://input.djr.com) fonts (14pt Input Mono Narrow, Regular)
-- Download and install [base16-monokai](https://github.com/chriskempson/base16-iterm2/blob/master/base16-monokai.dark.256.itermcolors) iTerm color scheme
+- Download and install [base16-mocha](https://github.com/chriskempson/base16-iterm2/blob/master/base16-mocha.itermcolors) iTerm color scheme
