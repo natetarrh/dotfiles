@@ -41,9 +41,9 @@ setopt APPEND_HISTORY
 setopt HIST_IGNORE_ALL_DUPS
 setopt HIST_IGNORE_DUPS
 setopt INC_APPEND_HISTORY
-setopt SHARE_HISTORY
 setopt PROMPT_SUBST
+setopt SHARE_HISTORY
 
 [ -f ~/Developer/dotfiles/base16-fzf/bash/base16-mocha.config ] && \
-  source ~/Developer/dotfiles/base16-fzf/bash/base16-mocha.config
+    source ~/Developer/dotfiles/base16-fzf/bash/base16-mocha.config
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
