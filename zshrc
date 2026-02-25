@@ -34,10 +34,10 @@ alias t='init_or_attach_tmux_session'
 
 function init_or_attach_tmux_session {
   local session_name=$(basename "$PWD")
-  if tmux has-session -t $session_name 2> /dev/null; then
-    tmux attach-session -t $session_name
+  if tmux has-session -t "$session_name" 2> /dev/null; then
+    tmux attach-session -t "$session_name"
   else
-    tmux new-session -s $session_name "vim" ';' new-window ';' select-window -t 1
+    tmux new-session -s "$session_name" "vim" ';' new-window ';' select-window -t 1
   fi
 }
 
