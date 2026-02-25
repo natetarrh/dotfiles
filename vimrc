@@ -14,36 +14,45 @@ nnoremap <C-f> :Files<CR>
 nnoremap <C-p> :Buffers<CR>
 nnoremap <Space> :
 
+" Indentation & Tabs
 set autoindent
-set clipboard=unnamed
 set expandtab
-set hidden
-set hlsearch
-set ignorecase
-set laststatus=2
-set list
-set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
-set mouse=a
-set number
-set regexpengine=0
-set rtp+=/opt/homebrew/opt/fzf
 set shiftwidth=2
-set showcmd
-set smartcase
 set smartindent
 set smarttab
 set softtabstop=2
-set splitright
+set tabstop=2
+set textwidth=80
+
+" Search
+set hlsearch
+set ignorecase
+set regexpengine=0
+set smartcase
+
+" UI & Display
+set number
+set showcmd
+set laststatus=2
 set statusline=\ %f
 set statusline+=\ %m%r%h%w
 set statusline+=\ %{FugitiveStatusline()}
 set statusline+=\ [%l,%c%V][%P]
-set tabstop=2
 set termguicolors
-set textwidth=80
+set list
+set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set splitright
+
+" Editing Behavior
+set clipboard=unnamed
+set hidden
+set mouse=a
 set whichwrap+=<,>,h,l,[,]
-set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg
+
+" Completion & Files
+set runtimepath+=/opt/homebrew/opt/fzf
 set wildmode=longest:full,full
+set wildignore=*.swp,*.bak,*.pyc,*.class,*.jar,*.gif,*.png,*.jpg
 
 let g:fzf_layout = { 'down': '40%' }
 let g:fzf_preview_window = []

@@ -40,7 +40,7 @@ $ brew install fzf rg tmux
 
 - Create symlinks:
 ```sh
-$ for dotfile in gitconfig tmux.conf vim vimrc zshrc
+$ for dotfile in gitconfig ideavimrc tmux.conf vim vimrc zshrc
 do
   ln -s ~/Developer/dotfiles/$dotfile ~/.$dotfile
 done

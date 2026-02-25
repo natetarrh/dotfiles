@@ -1,15 +1,29 @@
-function git_prompt_info {
-  local branch dirty
-  branch=$(git rev-parse --abbrev-ref HEAD 2>/dev/null)
-  if [[ -z $branch ]]; then
-    return 0
-  fi
-  git diff --no-ext-diff --quiet --exit-code 2>/dev/null
-  if [[ $? -ne 0 ]]; then
-    dirty="!"
-  fi
-  echo -e "on %F{magenta}$branch%f%F{green}$dirty%f"
-}
+# keybindings
+bindkey -e
+
+# history
+setopt APPEND_HISTORY
+setopt HIST_IGNORE_DUPS
+setopt SHARE_HISTORY
+export HISTSIZE=1000000
+export SAVEHIST=1000000
+
+# other defaults
+export EDITOR=vim
+
+# prompt
+source ~/Development/dotfiles/git-prompt.sh
+setopt PROMPT_SUBST
+PROMPT='
+%F{magenta}%~%f%B%F{cyan}$(__git_ps1 " %s" 2> /dev/null)%b%f
+$ '
+export GIT_PS1_SHOWDIRTYSTATE=true
+
+# shortcuts
+alias d='git diff'
+alias ls='ls --color'
+alias s='git status'
+alias t='init_or_attach_tmux_session'
 
 function init_or_attach_tmux_session {
   local session_name=$(basename "$PWD")
@@ -20,28 +34,7 @@ function init_or_attach_tmux_session {
   fi
 }
 
-PROMPT='
-%F{magenta}%n%f at %F{yellow}%m%f in %F{green}%~%f $(git_prompt_info)%f
-$ '
-
-alias d='git diff'
-alias ls='ls --color'
-alias s='git status'
-alias t='init_or_attach_tmux_session'
-
-bindkey -e
-
-export EDITOR=vim
+# fzf
+source ~/Development/dotfiles/base16-fzf/bash/base16-mocha.config
+source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND='rg --files'
-export HISTSIZE=1000000
-export PATH="$HOME/.local/bin:$PATH:$HOME/.rvm/bin"
-export SAVEHIST=1000000
-
-setopt APPEND_HISTORY
-setopt HIST_IGNORE_DUPS
-setopt PROMPT_SUBST
-setopt SHARE_HISTORY
-
-[ -f ~/Developer/dotfiles/base16-fzf/bash/base16-mocha.config ] && \
-    source ~/Developer/dotfiles/base16-fzf/bash/base16-mocha.config
-[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
