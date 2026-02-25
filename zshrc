@@ -1,3 +1,7 @@
+# completion
+autoload -U compinit
+compinit
+
 # keybindings
 bindkey -e
 
