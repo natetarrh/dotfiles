@@ -34,7 +34,7 @@ bindkey -e
 export EDITOR=vim
 export FZF_DEFAULT_COMMAND='rg --files'
 export HISTSIZE=1000000
-export PATH="$PATH:$HOME/.rvm/bin"
+export PATH="$HOME/.local/bin:$PATH:$HOME/.rvm/bin"
 export SAVEHIST=1000000
 
 setopt APPEND_HISTORY
