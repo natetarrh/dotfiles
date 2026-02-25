@@ -1,4 +1,4 @@
-DOTFILES_ROOT="${0:A:h}"
+DOTFILES_ROOT="$HOME/Developer/dotfiles"
 
 # completion
 autoload -U compinit
