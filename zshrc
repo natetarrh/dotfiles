@@ -1,3 +1,5 @@
+DOTFILES_ROOT="${0:A:h}"
+
 # completion
 autoload -U compinit
 compinit
@@ -17,7 +19,7 @@ export EDITOR=vim
 export PATH="$HOME/.local/bin:$PATH:$HOME/.rvm/bin"
 
 # prompt
-source ~/Developer/dotfiles/git-prompt.sh
+source "$DOTFILES_ROOT/git-prompt.sh"
 setopt PROMPT_SUBST
 PROMPT='
 %F{magenta}%~%f%B%F{cyan}$(__git_ps1 " %s" 2> /dev/null)%b%f
@@ -40,6 +42,6 @@ function init_or_attach_tmux_session {
 }
 
 # fzf
-source ~/Developer/dotfiles/base16-fzf/bash/base16-mocha.config
+source "$DOTFILES_ROOT/base16-fzf/bash/base16-mocha.config"
 source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND='rg --files'
