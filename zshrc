@@ -10,6 +10,7 @@ export SAVEHIST=1000000
 
 # other defaults
 export EDITOR=vim
+export PATH="$HOME/.local/bin:$PATH:$HOME/.rvm/bin"
 
 # prompt
 source ~/Development/dotfiles/git-prompt.sh
