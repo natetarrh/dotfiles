@@ -27,11 +27,6 @@ $ '
 export GIT_PS1_SHOWDIRTYSTATE=true
 
 # shortcuts
-alias d='git diff'
-alias ls='ls --color'
-alias s='git status'
-alias t='init_or_attach_tmux_session'
-
 function init_or_attach_tmux_session {
   local session_name=$(basename "$PWD")
   if tmux has-session -t "$session_name" 2> /dev/null; then
@@ -40,6 +35,11 @@ function init_or_attach_tmux_session {
     tmux new-session -s "$session_name" "vim" ';' new-window ';' select-window -t 1
   fi
 }
+
+alias d='git diff'
+alias ls='ls --color'
+alias s='git status'
+alias t='init_or_attach_tmux_session'
 
 # fzf
 source "$DOTFILES_ROOT/base16-fzf/bash/base16-mocha.config"
