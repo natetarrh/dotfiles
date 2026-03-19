@@ -45,3 +45,4 @@ alias t='init_or_attach_tmux_session'
 source "$DOTFILES_ROOT/base16-fzf/bash/base16-mocha.config"
 source <(fzf --zsh)
 export FZF_DEFAULT_COMMAND='rg --files'
+export FZF_CTRL_T_COMMAND='rg --files'
