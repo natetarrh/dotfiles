@@ -1,7 +1,7 @@
-let base16colorspace=256
-colorscheme base16-mocha
 syntax on
 filetype plugin indent on
+let base16colorspace=256
+colorscheme base16-mocha
 
 autocmd BufReadPost *.yaml.template set syntax=yaml
 autocmd BufWritePost * GitGutter
@@ -40,7 +40,7 @@ set statusline+=\ %{FugitiveStatusline()}
 set statusline+=\ [%l,%c%V][%P]
 set termguicolors
 set list
-set listchars=tab:▸\ ,trail:·,eol:¬,nbsp:_
+set listchars=tab:▸\ ,trail:·,nbsp:_
 set splitright
 
 " Editing Behavior
