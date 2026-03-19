@@ -19,3 +19,8 @@ Sessionx.vim
 tags
 # Persistent undo
 [._]*.un~
+
+
+
+eln-cache/
+elpa/
