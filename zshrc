@@ -15,7 +15,7 @@ export HISTSIZE=1000000
 export SAVEHIST=1000000
 
 # other defaults
-export EDITOR=vim
+export EDITOR=emacsclient
 export PATH="$HOME/.local/bin:$PATH:$HOME/.rvm/bin"
 
 # prompt
